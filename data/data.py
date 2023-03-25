@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+"""Data generation details for contact us and autocomplete pages."""
+
 
 @dataclass
 class NewUser:
@@ -12,4 +14,3 @@ class NewUser:
 @dataclass
 class Food:
     food_name: list = None
-

@@ -1,10 +1,10 @@
-import time
 from pages.base_page import BasePage
 from locators.locators import WebDriverUniversityLocators
 
 
 class HiddenElementsPage(BasePage):
     """Methods for clicking and text content extracting."""
+
     locators = WebDriverUniversityLocators()
 
     def check_not_displayed_element(self):

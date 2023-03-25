@@ -1,12 +1,10 @@
-import random
-import time
-
 from pages.base_page import BasePage
 from locators.locators import WebDriverUniversityLocators
 
 
 class PopUpAlertsPage(BasePage):
     """Methods for clicking and text content extracting."""
+
     locators = WebDriverUniversityLocators()
 
     def check_js_alert(self):

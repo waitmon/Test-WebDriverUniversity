@@ -1,5 +1,4 @@
 import random
-import time
 from data.generator import generated_food
 from pages.base_page import BasePage
 from locators.locators import WebDriverUniversityLocators
@@ -7,6 +6,7 @@ from locators.locators import WebDriverUniversityLocators
 
 class AutoCompleteTextFieldPage(BasePage):
     """Methods for autocomplete performing and asserting inner data from js.bundle."""
+
     locators = WebDriverUniversityLocators()
 
     def check_input_placeholder_data(self):

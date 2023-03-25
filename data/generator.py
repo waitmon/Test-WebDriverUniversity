@@ -5,6 +5,8 @@ from faker import Faker
 faker_en = Faker('En')
 Faker.seed()
 
+"""Data generation methods for contact us, autocomplete and file upload pages."""
+
 
 def generated_new_user():
     yield NewUser(

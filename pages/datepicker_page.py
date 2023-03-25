@@ -5,6 +5,7 @@ from locators.locators import WebDriverUniversityLocators
 
 class DatePickerPage(BasePage):
     """Methods for randomly picking year/month/day and asserting chosen date value."""
+
     locators = WebDriverUniversityLocators()
 
     def check_change_date(self):

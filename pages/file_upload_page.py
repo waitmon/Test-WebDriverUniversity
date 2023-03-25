@@ -6,6 +6,7 @@ from locators.locators import WebDriverUniversityLocators
 
 class FileUploadPage(BasePage):
     """Methods for generating files and further uploading."""
+
     locators = WebDriverUniversityLocators()
 
     def check_file_upload(self):

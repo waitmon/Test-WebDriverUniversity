@@ -5,6 +5,7 @@ from locators.locators import WebDriverUniversityLocators
 
 class ContactUsPage(BasePage):
     """Methods for generating input fields information and checking fields requirement."""
+
     locators = WebDriverUniversityLocators()
 
     def check_complete_info_filling(self):

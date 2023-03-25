@@ -1,12 +1,11 @@
 import random
-import time
 from pages.base_page import BasePage
 from locators.locators import WebDriverUniversityLocators
 
 
 class ActionsPage(BasePage):
     """Methods for performing some action chains components: double-clicking, dragging and dropping, hovering,
-    holding and releasing. """
+    holding and releasing."""
 
     locators = WebDriverUniversityLocators()
 

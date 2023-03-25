@@ -94,4 +94,27 @@ class WebDriverUniversityLocators:
     SUBMIT_BUTTON = (By.CSS_SELECTOR, 'input[id="submit-button"]')
     AUTOCOMPLETE_PLACEHOLDER = (By.CSS_SELECTOR, '#myInputautocomplete-list > div > strong')
 
+    # DatePicker Page
+    SELECT_DATE = (By.CSS_SELECTOR, 'input[class="form-control"]')
+    DATEPICKER_DROPDOWN = (By.CSS_SELECTOR, 'div[class="datepicker datepicker-dropdown dropdown-menu '
+                                            'datepicker-orient-left datepicker-orient-top"]')
+    DAYS_LIST = (By.CSS_SELECTOR, 'td[class="day"]')
+    MONTH_SWITCHER = (By.XPATH, '/html/body/div[2]/div[1]/table/thead/tr[1]/th[2]')
+    MONTH_LIST = (By.CSS_SELECTOR, 'span[class="month"]')
+    YEAR_SWITCHER = (By.XPATH, '/html/body/div[2]/div[2]/table/thead/tr/th[2]')
+    YEARS_LIST = (By.CSS_SELECTOR, 'span[class="year"]')
+    TEXT_FIELD = (By.CSS_SELECTOR, "input[type='text']")
 
+    # Contact Us Page:
+    FIRST_NAME_FIELD = (By.CSS_SELECTOR, 'input[name="first_name"]')
+    LAST_NAME_FIELD = (By.CSS_SELECTOR, 'input[name="last_name"]')
+    EMAIL_FIELD = (By.CSS_SELECTOR, 'input[name="email"]')
+    COMMENTS_FIELD = (By.CSS_SELECTOR, 'textarea[name="message"]')
+    RESET_BUTTON = (By.CSS_SELECTOR, 'input[type="reset"]')
+    SUBMIT_BUTTON_CU = (By.CSS_SELECTOR, 'input[type="submit"]')
+    SUBMIT_MSG = (By.XPATH, '//*[@id="contact_reply"]/h1')
+    ERROR_TXT = (By.TAG_NAME, 'body')
+
+    # File Upload Page:
+    UPLOAD_BUTTON = (By.CSS_SELECTOR, 'input[type="file"]')
+    SUBMIT_UPLOAD = (By.CSS_SELECTOR, 'input[type="submit"]')

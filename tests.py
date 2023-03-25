@@ -2,6 +2,9 @@ from pages.accordion_page import AccordionPage
 from pages.actions_page import ActionsPage
 from pages.ajax_loader_page import AjaxLoaderPage
 from pages.click_buttons_page import ClickButtonsPage
+from pages.contact_us_page import ContactUsPage
+from pages.datepicker_page import DatePickerPage
+from pages.file_upload_page import FileUploadPage
 from pages.hidden_elements_page import HiddenElementsPage
 from pages.scrolling_page import ScrollingPage
 from pages.to_do_list_page import ToDoListPage
@@ -157,6 +160,7 @@ class TestScrollingPage:
 
 class TestPopUpAlerts:
     """Performing interactions with various pop-up and modal windows: clicking, contents extracting."""
+
     def test_js_alert(self, driver):
         alert = PopUpAlertsPage(driver, 'https://webdriveruniversity.com/Popup-Alerts/index.html')
         alert.open()
@@ -190,6 +194,7 @@ class TestPopUpAlerts:
 
 class TestHiddenElements:
     """Performing clicking interactions with hidden elements."""
+
     def test_not_displayed_element(self, driver):
         hidden_elements = HiddenElementsPage(driver, 'https://webdriveruniversity.com/Hidden-Elements/index.html')
         hidden_elements.open()
@@ -211,6 +216,7 @@ class TestHiddenElements:
 
 class TestAutoCompleteTextField:
     """Performing interactions with autocomplete fields: inputting and asserting inner data."""
+
     def test_input_placeholder_data(self, driver):
         autocomplete = AutoCompleteTextFieldPage(driver, 'https://webdriveruniversity.com/Autocomplete-TextField'
                                                          '/autocomplete-textfield.html')
@@ -222,3 +228,55 @@ class TestAutoCompleteTextField:
                                                          '/autocomplete-textfield.html')
         autocomplete.open()
         autocomplete.check_input_non_placeholder_data()
+
+
+class TestDatePicker:
+    """Performing date picking process."""
+
+    def test_change_data(self, driver):
+        datepicker = DatePickerPage(driver, 'https://webdriveruniversity.com/Datepicker/index.html')
+        datepicker.open()
+        datepicker.check_change_date()
+
+
+class TestContactUs:
+    """Performing filling information process."""
+
+    def test_complete_info_filling(self, driver):
+        contact_page = ContactUsPage(driver, 'https://webdriveruniversity.com/Contact-Us/contactus.html')
+        contact_page.open()
+        submit_message = contact_page.check_complete_info_filling()
+        assert submit_message == 'Thank You for your Message!'
+
+    def test_empty_info_filling(self, driver):
+        contact_page = ContactUsPage(driver, 'https://webdriveruniversity.com/Contact-Us/contactus.html')
+        contact_page.open()
+        submit_message = contact_page.check_empty_info_filling()
+        assert submit_message == 'Error: all fields are required\nError: Invalid email address'
+
+    def test_incomplete_info_filling(self, driver):
+        contact_page = ContactUsPage(driver, 'https://webdriveruniversity.com/Contact-Us/contactus.html')
+        contact_page.open()
+        submit_message = contact_page.check_incomplete_info_filling()
+        assert submit_message == 'Error: all fields are required'
+
+    def test_invalid_email_filling(self, driver):
+        contact_page = ContactUsPage(driver, 'https://webdriveruniversity.com/Contact-Us/contactus.html')
+        contact_page.open()
+        submit_message = contact_page.check_invalid_email_filling()
+        assert submit_message == 'Error: Invalid email address'
+
+    def test_reset_button(self, driver):
+        contact_page = ContactUsPage(driver, 'https://webdriveruniversity.com/Contact-Us/contactus.html')
+        contact_page.open()
+        contact_page.check_reset_button()
+
+
+class TestFileUpload:
+    """Performing generated file uploading."""
+
+    def test_file_upload(self, driver):
+        upload = FileUploadPage(driver, 'https://webdriveruniversity.com/File-Upload/index.html')
+        upload.open()
+        modal_message = upload.check_file_upload()
+        assert modal_message == 'Your file has now been uploaded!'

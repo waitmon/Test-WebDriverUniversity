@@ -12,3 +12,4 @@ class NewUser:
 @dataclass
 class Food:
     food_name: list = None
+

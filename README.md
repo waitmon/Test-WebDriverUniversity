@@ -3,7 +3,7 @@ UI test of https://webdriveruniversity.com/
 
 ## Introduction
 
-This repository contains sets of UI tests of various web elements for https://webdriveruniversity.com/. The following sections have been tested: accordion, clicking methods, ajax loader, autocomplete, datepicker, file upload, hidden elements, pop up alerts, scrolling methods. All tests were designed with a usage of Page Object Model pattern and Selenium Webdriver.
+This repository contains sets of UI tests of various web elements for https://webdriveruniversity.com/. The following sections have been tested: accordion, clicking methods, ajax loader, autocomplete, datepicker, file upload, hidden elements, pop up alerts, scrolling methods.
 
 ## Set-up
 1) Install all requirements: 
